@@ -1,21 +1,24 @@
 import React from 'react';
 import {GoogleApiWrapper, Map, Marker} from 'google-maps-react';
-import Quakes from '../Quakes';
-import { render } from '@testing-library/react';
+import Quakes from '../Quakes/Quakes';
 
-class MapContainer extends React.Component {
+
+export class MapContainer extends React.Component {
   state = {
     quakes: [],
   };
 
   componentDidMount() {
-    fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson")
-
-    .then((result) => {
+    fetch(
+      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
+    )
+      .then((result) => {
       return result.json();
     })
-    .then((jsonData) => {
-      quakes: jsonData.features
+      .then((jsonData) => {
+        this.setState({
+          quakes: jsonData.features,
+        });
     });
   }; 
 
@@ -47,7 +50,7 @@ class MapContainer extends React.Component {
                   lat: quake.geometry.coordinates[1],
                   lng: quake.geometry.coordinates[0]
                 }}
-                img={img}
+                icon={icon}
               />
             ))}
           </Map>
@@ -59,13 +62,6 @@ class MapContainer extends React.Component {
     )}
 };
 
-
-
-
-
-
-
-
-
-
-export default MapContainer;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg',
+})(MapContainer);

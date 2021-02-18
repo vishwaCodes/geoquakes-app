@@ -3,8 +3,8 @@ import QuakesList from './QuakesList';
 
 const Quakes = (props) => {
         return (
-            <div className="">
-                <div className="container">
+            <div className="app">
+                <div className="quakeContainer">
                     <h2>Earthquakes from the past week:</h2>
                     <QuakesList quakesList={props.quakes}/>
                 </div>
@@ -12,4 +12,4 @@ const Quakes = (props) => {
         );
 };
 
-export default Quakes;
+export default Quakes; 
