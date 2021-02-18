@@ -1,9 +1,9 @@
 import React from 'react';
-import Quakes from './components/Quakes';
+import Quakes from './components/Quakes/Quakes';
 
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="app">
       <div className="mapContainer">
@@ -12,7 +12,7 @@ function App() {
       <div className="quakeContainer">
         <h1>Earthquakes from the past week:</h1>
         ...put Quakes Component here...
-        <Quakes />
+        <Quakes quakes={props.quakes}/>
       </div>
     </div>
   );
