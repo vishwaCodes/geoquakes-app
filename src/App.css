@@ -11,15 +11,20 @@ body {
 }
 
 .mapContainer {
-  width: 40%;
+  width: 43%;
   padding-top: 2em; 
-  padding-left: 2em;
-  background-color: lightblue;
+  padding-left: 2em; 
+  margin-left: 5rem;
+  background-color: rgba(48, 12, 38, 0.432);  
 }
 
 .quakeContainer {
   width: 40%;
   padding-top: 2em; 
   padding-right: 2em;
-  background-color: pink;
+  margin-left: 5rem;
+  margin-right: -3rem;
+  background-color: rgb(103, 153, 129); 
+  color: whitesmoke;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }

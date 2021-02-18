@@ -5,7 +5,7 @@ const Quakes = (props) => {
         return (
             <div className="app">
                 <div className="quakeContainer">
-                    <h2>Earthquakes from the past week:</h2>
+                    <h3>Earthquakes around the world from the past week:</h3>
                     <QuakesList quakesList={props.quakes}/>
                 </div>
             </div>
