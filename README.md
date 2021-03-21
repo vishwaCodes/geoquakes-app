@@ -1,6 +1,6 @@
 # React GeoQuakes
 
-A React app renders significant earthquakes from the past week. 
+A React app that renders significant earthquakes from the past week. 
 
 # Technologies Used
 
